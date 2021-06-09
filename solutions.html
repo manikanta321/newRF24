@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+ 
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+
+
+
+
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+}
+.container1 {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+
+  padding-top: 20px;
+}
+.left {
+  width: 50%;
+  height: 600px;
+  background: url('images/solution1.jpg')
+    no-repeat center / cover;
+  border-radius: 8px;
+}
+
+.left1 {
+  width: 50%;
+  height: 600px;
+  background: url('images/pcb30.jpeg')
+    no-repeat center / cover;
+  border-radius: 8px;
+}
+.right {
+  width: 50%;
+  min-height: 300px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  color:black;
+  margin-left: -150px;
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+}
+.right h1 {
+  font-size: 30px;
+  font-weight:normal;
+}
+.right p {
+  margin: 10px 0;
+  font-weight: 600;
+  line-height: 25px;
+  color: black;
+  font-weight:20px;
+}
+.right a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgb(12, 49, 172);
+  color: rgb(255, 255, 255);
+  padding: 11px 19px;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container1 {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+  }
+  .left {
+    width: 100%;
+    height: 400px;
+  }
+  .left1 {
+    width: 100%;
+    height: 400px;
+  }
+  .right {
+    width: 90%;
+    margin: 0;
+    margin-top: -100px;
+  }
+}
+
+/* ********************* */
+/* This Code is for only the floating card in right bottom corner */
+/* ********************** */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  color: var(--color-4);
+  text-decoration: none;
+}
+#webCifar-sidebox {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  overflow-x: clip;
+  width: 300px;
+  font-size: 16px;
+}
+#webCifar-sidebox p {
+  padding: 0;
+  margin: 0;
+}
+#webCifar {
+  --color-1: #17bcb4;
+  --color-2: #24252a;
+  --color-3: #244044;
+  --color-4: #f3f8f7;
+  background: var(--color-2);
+  display: inline-block;
+  color: var(--color-4);
+  padding: 10px 17px;
+  border-radius: 6px;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  -webkit-transform: translateX(calc(100% + 5px));
+  transform: translateX(calc(100% + 5px));
+  -webkit-transition: 0.5s ease-out transform;
+  transition: 0.5s ease-out transform;
+  z-index: 4;
+}
+
+#webCifar.active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+#webCifar .logo {
+  font-size: 25px;
+}
+
+#webCifar .author {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#webCifar .author span {
+  background-color: var(--color-3);
+  padding: 3px;
+  border-radius: 4px;
+}
+
+#webCifar .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#webCifar .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: left;
+}
+
+#webCifar .item:hover {
+  background-color: var(--color-3);
+}
+
+#webCifar svg {
+  max-width: 20px;
+}
+
+#webCifar .close {
+  position: absolute;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  background-color: var(--color-3);
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#webCifar-icon {
+  --color-2: #24252a;
+  --color-3: #244044;
+  font-family: "Roboto Mono", monospace;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: var(--color-2);
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 4px;
+  gap: 5px;
+  margin: 5px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  right: -27%;
+  border: 1px solid #ffffff7d;
+}
+
+#webCifar-icon svg {
+  max-width: 20px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+    <!-- Start Main Top -->
+    <div class="main-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="custom-select-box">
+                    
+                    </div>
+                    <div class="right-phone-box">
+                        <p>Call US :- <a href="#"> +0000000000</a></p>
+                    </div>
+                    <div class="our-link">
+                        <ul>
+                            
+                            <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
+                            <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    <!-- End Main Top -->
+
+    <!-- Start Main Top -->
+    <header class="main-header">
+         <!-- Start Navigation -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                    <a class="navbar-brand" href="index.html"><img src="#" class="logo" alt=""></a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu">
+								<li><a href="#">RF Adopters</a></li>
+								<li><a href="#">Power Amplifires</a></li>
+                                <li><a href="#">LNA</a></li>
+                                <li><a href="#">PLLs</a></li>
+                                <li><a href="#">Attenuators</a></li>
+                                <li><a href="#">Filters</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="solutions.html">solutions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Design.html">Design Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="testing.html">Testing</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="consultants.html">Consultants</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+                <!-- Start Atribute Navigation -->
+                <!-- <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li class="side-menu"><a href="#">
+						<i class="fa fa-shopping-bag"></i>
+                            <span class="badge">3</span>
+							<p>My Cart</p>
+					</a></li>
+                    </ul>
+                </div> -->
+                <!-- End Atribute Navigation -->
+            </div>
+            <!-- Start Side Menu -->
+       
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+   
+    <!-- End Top Search -->
+
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>SOLUTIONS</h2>
+                    <!-- <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">ABOUT US</li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+
+   
+    <section>
+        <div class="container1">
+          <div class="left"></div>
+          <div class="right">
+            <div class="content">
+              <h1><b>Applications:</b> </h1>
+              <p><ul>
+                  <li>○ GTTH (Gigabit to the Home)</li>
+                  <li>○ Mobile Backhaul</li> 
+                  <li>○ Disaster Recovery</li>
+                  <li>○ Smart Cities</li>
+                  <li>○ Video Surveillance</li>
+              </ul></p>
+              <a href="#" class="btn">Contact-US</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+
+      <section>
+        <div class="container1">
+          <div class="left1"></div>
+          <div class="right">
+            <div class="content">
+              <h1><b>MARKETS:</b> </h1>
+              <p><ul>
+                  <li>○ Public Safety</li>
+                  <li>○ State & Local Government</li> 
+                  <li>○ Enterprise</li>
+                  <li>○ Wireless Carriers</li>
+                  <li>○ Education</li>
+                  <li>○ WISP Network Providers</li>
+                  <li>○ Hospitality</li>
+                  <li>○ Managed Service Providers</li>
+              </ul></p>
+              <a href="#" class="btn">Contact-US</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- *******************   -->
+      <!--  !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <!--  This Code is for only the floating card in right bottom corner -->
+      <!-- ********************  -->
+      
+      <div id="webCifar-sidebox">
+        <div id="webCifar">
+          <h2 class="logo">Web Cifar</h2>
+          <p class="author">Coded By <span>Shaif Arfan</span> </p>
+          <div class="items">
+            <a href="https://www.youtube.com/channel/UCdxaLo9ALJgXgOUDURRPGiQ" target="_blank" class="item youtubeLink">
+              <svg title="watch how we made this" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+              </svg>
+              <p>Watch how we made this.
+              </p>
+            </a>
+            <a href="https://webcifar.com" target="_blank" class="item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+              <p>https://webcifar.com</p>
+            </a>
+      
+          </div>
+          <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+        <!-- <div id="webCifar-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p>Info About the pen</p>
+        </div> -->
+      </div>
+
+
+
+
+
+
+
+   <!-- Start Footer  -->
+   <footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Business Time</h3>
+                        <ul class="list-time">
+                            <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>contact</h3>
+                        <form class="newsletter-box">
+                            <div class="form-group">
+                                <input class="" type="email" name="Email" placeholder="Email Address*" />
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <button class="btn hvr-hover" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Social Media</h3>
+                        
+                        <ul style="padding-top: 15px;">
+                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-widget">
+                        <h4>About RForbit</h4>
+                        <p>Provide cutting edge wireless and Electronics Products to address the demands of enterprise and commercial customers all over the world. product line supports all wireless network protocols and frequencies including Next Generation Networks in 5G, Defense and Satellite Communications.</p> 
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Customer Service</a></li>
+    
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: xxxxxx <br>xxxxxx<br> xxxxxx </p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:">000000000</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:">contactinfo@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer  -->
+
+
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
+            <a href="https://html.design/">html design</a></p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/inewsticker.js"></script>
+    <script src="js/bootsnav.js."></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/baguetteBox.min.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+
+
+
+
+
+<script>
+    // *********************
+// This Code is for only the floating card in right bottom corner
+// **********************
+
+const WebCifarIcon = document.querySelector("#webCifar-icon");
+const WebCifarEl = document.querySelector("#webCifar");
+const close = WebCifarEl.querySelector(".close");
+const youtubeLink = document.querySelector(".youtubeLink");
+
+WebCifarIcon.addEventListener("click", () => {
+  WebCifarEl.classList.add("active");
+});
+close.addEventListener("click", () => {
+  WebCifarEl.classList.remove("active");
+});
+
+youtubeLink.setAttribute("href", "https://youtu.be/_HTL0XSMcRQ");
+
+</script>
+
+</html>
