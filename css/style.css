@@ -829,12 +829,17 @@ body {
      border: 2px solid #b0b435;
 }
 .cover-slides p a {
-    font-size: 24px;
+    font-size: 20px;
     color: #ffffff;
     border: none;
-    text-transform: uppercase;
+    -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+    transition: color 1s; /* For modern browsers */
     padding: 4px 6px;
 }
+.cover-slides p a:hover{
+    color: #ff0000;
+}
+
 /*------------------------------------------------------------------ Categories Shop -------------------------------------------------------------------*/
  .categories-shop{
      padding: 70px 0px;
@@ -2487,7 +2492,7 @@ body {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    color: #d0deec;
+    color: black;
     background-color: #bd787824;
     background-clip: padding-box;
     border: 1px solid #ced4da;
