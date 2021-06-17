@@ -850,7 +850,7 @@
                 <div class="contact-form-right">
                     <h2>AMPLIFIER SELECTION </h2>
                    
-                    <form id="contactForm" style="align-items: center;">
+                    <form id="contactForm1" style="align-items: center;">
                         <div class="row">
                            
                             <div class="col-md-12">
@@ -865,20 +865,20 @@
                                 <div class="form-group">
                                   
                                   <label>Product catagary:</label>
-                                    <select name="cars" id="cars"  class="form-control" placeholder="Product catagary" >
-                                        <option value="volvo">Amplifier</option>
-                                        <option value="saab">Attenuators</option>
-                                        <option value="opel">Antenna</option>
-                                        <option value="audi">Cables</option>
-                                        <option value="audi">Filters</option>
-                                        <option value="audi">Mixers</option>
-                                        <option value="audi">Modulators/Demodulators</option>
-                                        <option value="audi">Oscillators</option>
-                                        <option value="audi">Power Spliters/combiners</option>
-                                        <option value="audi">Power Detectors</option>
-                                        <option value="audi">Switches</option>
-                                        <option value="audi">Waveguide Parts</option>
-                                        <option value="audi">others</option>
+                                    <select  id="catagary" class="form-control" placeholder="Product catagary" >
+                                        <option id="Amplifier" value="Amplifier">Amplifier</option>
+                                        <option  id="Attenuators"  value="Attenuators">Attenuators</option>
+                                        <option  id="antenna" value="Antenna">Antenna</option>
+                                        <option id="cabels" value="Cables">Cables</option>
+                                        <option id="filters"  value="Filters">Filters</option>
+                                        <option  id="Mixers" value="Mixers">Mixers</option>
+                                        <option id="Modulators/Demodulators" value="Modulators/Demodulators">Modulators/Demodulators</option>
+                                        <option  id="Oscillators" value="Oscillators">Oscillators</option>
+                                        <option id="Power Spliters/combiners" value="Power Spliters/combiners">Power Spliters/combiners</option>
+                                        <option  id="Power Detectors" value="Power Detectors">Power Detectors</option>
+                                        <option id="Switches" value="Switches">Switches</option>
+                                        <option     id="Waveguide Parts" value="Waveguide Parts">Waveguide Parts</option>
+                                        <option id="others" value="others">others</option>
                                       </select>
                                   
                                     <div class="help-block with-errors"></div>
@@ -893,17 +893,16 @@
                                 <div class="form-group">
                                   
                                   <label>Frequency Band:</label>
-                                    <select name="cars" id="cars"  class="form-control" placeholder="Product catagary" >
-                                        <option value="volvo">Other</option>
-                                        <option value="saab">Ku-Band</option>
-                                        <option value="opel">E-Band</option>
-                                        <option value="audi">C-Band</option>
-                                        <option value="audi">L-Band</option>
-                                        <option value="audi">Ka-Band</option>
-                                        <option value="audi">X-Band</option>
-                                        <option value="audi">V-Band</option>
-                                        <option value="audi">S-Band</option>
-                                    
+                                    <select  id="band"  class="form-control" placeholder="Product catagary" >
+                                        <option    value="Other">Other</option>
+                                        <option value="Ku-Band">Ku-Band</option>
+                                        <option value="E-Band">E-Band</option>
+                                        <option value="C-Band">C-Band</option>
+                                        <option value="L-Band">L-Band</option>
+                                        <option value="Ka-Band">Ka-Band</option>
+                                        <option value="X-Band">X-Band</option>
+                                        <option value="V-Band">V-Band</option>
+                                        <option value="S-Band">S-Band</option>
                                       </select>
                                   
                                     <div class="help-block with-errors"></div>
@@ -914,7 +913,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Gain:</label>
-                                    <input type="text" class="form-control" id="subject" name="name" placeholder="your answer" required data-error="Please enter your Subject">
+                                    <input type="text" class="form-control" id="gain" name="gain" placeholder="your answer" required data-error="Please enter your Subject">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -930,13 +929,13 @@
 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Test Data required</label><br>
-                                        <input type="checkbox" id="yes" name="yes" value="yes">
-                                        <label for="1"> yes</label><br>
-                                        <input type="checkbox" id="no" name="no" value="no">
-                                        <label for="2">No</label><br>
-                                        <input type="checkbox" id="TBD" name="TBD" value="TBD">
-                                        <label for="3">  TBD</label><br><br>
+                                        <label>Test Data required</label>:
+                                        <input type="checkbox" id="yesTestData" name="yes" value="yes">
+                                        <label for="1"> yes</label>
+                                        <input type="checkbox" id="noTestData" name="no" value="no">
+                                        <label for="2">No</label>
+                                        <input type="checkbox" id="tbdTestData" name="TBD" value="TBD">
+                                        <label for="3">  TBD</label>
                                        
                                         <div class="help-block with-errors"></div>
                                     </div>
@@ -1201,6 +1200,7 @@
     <script src="js/baguetteBox.min.js"></script>
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
+    <script src="js/contact-form-script1.js"></script>
     <script src="js/custom.js"></script>
 </body>
 

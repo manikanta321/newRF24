@@ -1,4 +1,4 @@
-$("#contactForm").validator().on("submit", function (event) {
+$("#contactForm1").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
@@ -13,16 +13,22 @@ $("#contactForm").validator().on("submit", function (event) {
 
 function submitForm(){
     // Initiate Variables With Form Content
-    var name = $("#name").val();
+  
     var email = $("#email").val();
-    var subject = $("#subject").val();
+    var catagary = $("#catagary").val();
+    var band = $("#band").val();
+    var gain = $("#gain").val();
+    var testDataSelected = "Nothing is selectd";
+    if($("#yesTestData").prop('checked'))testDataSelected = "YES selected";
+    else if($("#noTestData").prop('checked'))testDataSelected="NO Selected";
+    else if($("#tbdTestData").prop('checked'))testDataSelected="TBD Selected";
     var message = $("#message").val();
 
 
     $.ajax({
         type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message,
+        url: "php/form-process1.php",
+        data:  "email=" + email + "&catagary=" + catagary +"&band=" + band +"&gain=" + gain + "&testDataSelected=" + testDataSelected+ "&message=" + message,
         success : function(text){
             if (text == "success"){
                 formSuccess();
@@ -35,12 +41,12 @@ function submitForm(){
 }
 
 function formSuccess(){
-    $("#contactForm")[0].reset();
+    $("#contactForm1")[0].reset();
     submitMSG(true, "Message Submitted!")
 }
 
 function formError(){
-    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $("#contactForm1").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $(this).removeClass();
     });
 }
